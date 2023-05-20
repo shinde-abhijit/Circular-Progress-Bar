@@ -1,0 +1,125 @@
+:root{
+    --blue: #2192ff;
+    --danger: #dc3545;
+    --tomato: tomato;
+    --white: #ffffff;
+    --black: #222222;
+    --black-light: #242526;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+}
+
+body{
+    background-color: var(--black);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.progress-bar{
+    position: relative;
+    /* background-color: var(--black-light); */
+    background-color: #394041;
+    border-radius: 10px;
+    width: 280px;
+    height: 300px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+.progress-bar:hover{
+    opacity: 1;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    color: var(--white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.text span{
+    font-size: 18px;
+    font-weight: 500;   
+}
+
+.progress-bar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress-bar svg circle{
+    fill: none;
+    stroke-width: 10px;
+    /* stroke: orangered; */
+    stroke-dasharray: 505;
+    stroke-dashoffset: 505;
+    stroke-linecap: round;
+}
+
+.html circle{
+    stroke: var(--blue);
+    animation: animatehtml 2s linear forwards;
+}
+@keyframes animatehtml{
+    100%{
+        stroke-dashoffset: 75;
+    }
+}
+.css circle{
+    stroke: #21ff08;
+    animation: animatecss 2s linear forwards;
+}
+@keyframes animatecss{
+    100%{
+        stroke-dashoffset: 65;
+    }
+}
+.javascript circle{
+    stroke: var(--white);
+    animation: animatejavascript 2s linear forwards;
+}
+@keyframes animatejavascript{
+    100%{
+        stroke-dashoffset: 101;
+    }
+}
+.python circle{
+    stroke: var(--tomato);
+    animation: animatepython 2s linear forwards;
+}
+@keyframes animatepython{
+    100%{
+        stroke-dashoffset: 126;
+    }
+}
+.bootstrap circle{
+    stroke: var(--danger);
+    animation: animatebootstrap 2s linear forwards;
+}
+@keyframes animatebootstrap{
+    100%{
+        stroke-dashoffset: 101;
+    }
+}
